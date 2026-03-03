@@ -5,54 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-
-        td {
-            padding: 20px;
-            min-height: 50px;
-        }
-    </style>
 </head>
 
 <body>
-    <table border="1">
-        <tr>
-            <td colspan="4"> </td>
-            <td colspan="2"> </td>
-            <td> </td>
-            <td rowspan="2"> </td>
-        </tr>
 
-        <tr>
-            <td colspan="2" rowspan="2"> </td>
-            <td> </td>
-            <td colspan="2"> </td>
-            <td> </td>
-            <td rowspan="2"> </td>
+    <header>
+        <h1>Pagina mea</h1>
+        <nav>
+            <a href="#">Acasa</a> |
+            <a href="#">Despre</a> |
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-        </tr>
+    <main>
 
+        <section>
+            <h2>Text formatting</h2>
+            <p>
+                <i>Italic</i>
+                <b>Bold</b>
+                <mark>Mark</mark>
+                <small>Small</small>
+                <del>Delete</del>
+                <ins>Insert</ins>
+                <sub>Subscript</sub>
+                <sup>Superscript</sup>
+            </p>
+        </section>
 
-        <tr>
-            <td rowspan="2"> </td>
-            <td colspan="3"> </td>
-            <td rowspan="2"> </td>
-        </tr>
+        <section>
+            <h2>Lista</h2>
+            <ul>
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+            </ul>
+        </section>
 
-        <tr>
-            <td></td>
-            <td> </td>
-            <td></td>
-            <td colspan="3"></td>
-        </tr>
+        <article>
+            <h2>Formular inregistrare</h2>
+            <form action="" method="post">
+                <label for="username">username:</label><br>
+                <input type="text" id="username" name="username" required minlength="3" maxlength="10"><br><br>
+                <label for="password">password:</label><br>
+                <input type="password" id="password" name="password" required minlength="6" maxlength="10"><br><br>
+                <label for="email">email:</label><br>
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    placeholder="[EMAIL_ADDRESS]"><br><br>
+                <label for="grupa">grupa:</label><br>
+                <input type="text" id="grupa" name="grupa" min="101" max="1000"><br><br>
+                <label for="matricol">nr. matricol:</label><br>
+                <input type="text" id="matricol" name="matricol"><br><br>
+                <label for="dob">data nasterii:</label><br>
+                <input type="date" id="dob" name="dob" max="2006-01-01"><br><br>
+                <input type="checkbox" id="tos" name="tos" checked>
+                <label for="tos">Am citit si sunt de acord cu termenii si conditiile</label><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </article>
 
+    </main>
 
-    </table>
+    <aside>
+        <h3>Aside</h3>
+        <p>Continut secundar / sidebar.</p>
+    </aside>
+
+    <footer>
+        <p>Footer &mdash; Alexandru Negrescu, 2026</p>
+    </footer>
+
 </body>
 
 </html>
