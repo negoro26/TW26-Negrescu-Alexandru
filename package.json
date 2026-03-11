@@ -1,0 +1,23 @@
+{
+  "name": "tw26-negrescu-alexandru",
+  "version": "1.0.0",
+  "description": "yhbjbyhknuhbvbgvgibhbhjn pl\r sdfkljasd",
+  "homepage": "https://github.com/negoro26/TW26-Negrescu-Alexandru#readme",
+  "bugs": {
+    "url": "https://github.com/negoro26/TW26-Negrescu-Alexandru/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/negoro26/TW26-Negrescu-Alexandru.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
