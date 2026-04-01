@@ -1,0 +1,82 @@
+$primary-color: rgb(255, 0, 0);
+$padding: 12px;
+
+@mixin nav-style($backround-color: default) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: $padding;
+    background-color: $backround-color;
+}
+
+nav {
+    @include nav-style(blue);
+    color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    button {
+        background-color: $primary-color;
+        color: white
+    }
+
+    h2 {
+        color: blue;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing : content-box;
+    // border-box are exact cati pixeli zice
+}
+
+.btn {
+    background: burlywood;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.btn-succes {
+    @extend .btn;
+    background-color: rgb(179, 0, 255);
+}
+
+$sizes: 1, 2, 4, 8;
+
+@each $size in $sizes {
+    .p#{$size} {
+        padding: $size * 1px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+    .card {
+        width: 200px;
+    }
+}
+
+@media print {
+    .btn {
+        display: none;
+    }
+}
