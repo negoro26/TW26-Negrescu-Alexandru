@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
 </head>
 
 <body>
-    <h2>Validare CNP</h2>
-    <input type="text" id="cnp" placeholder="Introduceți un CNP...">
-    <button onclick="valideazaCnpDinPagina()">Validare</button>
-    <p id="rezultat"></p>
+    <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+        <line x1="50" y1="50" x2="450" y2="50" stroke="gray" stroke-width="3" />
+        <circle cx="50" cy="50" r="40" stroke-width="3" fill="red" />
+        <rect x="200" y="200" width="100" height="150" />
+        <polyline points="100,100 150,150 200,100" fill="none" stroke="black" stroke-width="3" />
+        <polygon points="200,200 250,250 300,200" fill="blue" />
+        <path d="M 200,100 V 420 Z" stroke="black" stroke-width="3" />
+        <path d="M 100,100 C 150,150 250,150 300,100" stroke="black" stroke-width="3" fill="none" />
+    </svg>
+
+    <script>
+        document.body.children
+        document.body.childNodes
+        document.getElementById("h2").innerHTML = "<a href='#'>link</a>"
+        document.getElementsByClassName("h3")[0].innerText = "test"
+        document.querySelector("h3.h3")
+
+        const h4 = document.createElement("h4")
+        h4.innerText = "test"
+        document.body.appendChild(h4)
+    </script>
 </body>
 
 </html>
