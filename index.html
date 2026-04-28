@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="json-container"></div>
+    <div id="xml-container"></div>
+
+    <script>
+
+        function fetchJson(path) {
+            fetch(path)
+                .then(r => r.json())
+                .then(data => {
+                    const container = document.getElementById("json-container");
+                    let html = '<h2>JSON Exchange Rates</h2><ul>';
+                    data.exchangeRates.forEach(rate => {
+                        html += `<li>${rate.date}: ${rate.fromCoin} -> ${rate.toCoin} = ${rate.value}</li>`;
+                    });
+                    html += '</ul>';
+                    container.innerHTML = html;
+                })
+                .catch(err => console.error(err));
+        }
+
+        function fetchXml(path) {
+            fetch(path)
+                .then(r => r.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(data, "text/xml");
+                    
+                    const container = document.getElementById("xml-container");
+                    let html = '<h2>XML Exchange Rates</h2><ul>';
+                    const rates = xml.getElementsByTagName("rate");
+                    for (let i = 0; i < rates.length; i++) {
+                        const date = rates[i].getElementsByTagName("date")[0].textContent;
+                        const fromCoin = rates[i].getElementsByTagName("fromCoin")[0].textContent;
+                        const toCoin = rates[i].getElementsByTagName("toCoin")[0].textContent;
+                        const value = rates[i].getElementsByTagName("value")[0].textContent;
+                        html += `<li>${date}: ${fromCoin} -> ${toCoin} = ${value}</li>`;
+                    }
+                    html += '</ul>';
+                    container.innerHTML = html;
+                })
+        }
+
+        fetchJson("curs.json");
+        fetchXml("curs.xml");
+
+    </script>
+
+</body>
+
+</html>

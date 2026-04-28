@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exchangeRates>
+  <rate>
+    <date>2024-04-28</date>
+    <fromCoin>USD</fromCoin>
+    <toCoin>EUR</toCoin>
+    <value>0.92</value>
+  </rate>
+  <rate>
+    <date>2024-04-28</date>
+    <fromCoin>USD</fromCoin>
+    <toCoin>GBP</toCoin>
+    <value>0.79</value>
+  </rate>
+  <rate>
+    <date>2024-04-28</date>
+    <fromCoin>EUR</fromCoin>
+    <toCoin>RON</toCoin>
+    <value>4.97</value>
+  </rate>
+  <rate>
+    <date>2024-04-28</date>
+    <fromCoin>GBP</fromCoin>
+    <toCoin>USD</toCoin>
+    <value>1.27</value>
+  </rate>
+  <rate>
+    <date>2024-04-28</date>
+    <fromCoin>JPY</fromCoin>
+    <toCoin>USD</toCoin>
+    <value>0.0067</value>
+  </rate>
+</exchangeRates>
