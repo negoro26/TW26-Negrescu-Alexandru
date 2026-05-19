@@ -3,7 +3,10 @@ import { cos } from "../stores/ProductStore"
 import Card from "../components/Card.vue"
 
 const removeFromCart = (product: any) => {
-    cos.value = cos.value.filter((p: any) => p.id !== product.id)
+    const index = cos.value.findIndex((p: any) => p.id === product.id)
+    if (index !== -1) {
+        cos.value.splice(index, 1)
+    }
 }
 </script>
 
