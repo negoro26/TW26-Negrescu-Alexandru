@@ -1,15 +1,10 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import { produse } from "../stores/ProductStore"
 
 const initialCount = parseInt(localStorage.getItem('count') || '0', 10)
 const count = ref(initialCount)
 const name = ref('')
-
-const produse = [
-  {id: 1, nume: "produs 1"},
-  {id: 2, nume: "produs 2"},
-  {id: 3, nume: "produs 3"}
-]
 
 watch(count, (newValue) => {
   localStorage.setItem('count', newValue.toString())
@@ -34,7 +29,7 @@ watch(count, (newValue) => {
   {{ name }}
 
   <div v-for="produs in produse" :key="produs.id">
-    {{produs.nume}}
+    {{produs.name}}
   </div>
 
 </template>

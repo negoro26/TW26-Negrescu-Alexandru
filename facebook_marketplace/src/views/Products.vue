@@ -1,14 +1,14 @@
 <script setup lang="ts">
-const produse = [
-  {id: 1, nume: "produs 1"},
-  {id: 2, nume: "produs 2"},
-  {id: 3, nume: "produs 3"}
-]
+    import { produse, cos } from "../stores/ProductStore"
+    import Card from "../components/Card.vue"
+    const addToCart = (product: any) => {
+        cos.value.push(product)
+    }
 </script>
 
 <template>
-    <div v-for="produs in produse" :key="produs.id">
-        {{produs.nume}}
+    <div v-for="product in produse" :key="product.id">
+      <Card :product="product" :isInCart="false" @add-to-cart="addToCart"/>
     </div>
 </template>
 
